@@ -1,0 +1,6 @@
+Launch Browser:
+    C-c b ;; opens url at point
+
+
+Editing sections of text:
+    C-x r t string-rectangle
