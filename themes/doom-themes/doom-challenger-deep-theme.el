@@ -1,0 +1,1 @@
+/Users/lambert/.emacs.d/elpaca/repos/themes/themes/doom-challenger-deep-theme.el
