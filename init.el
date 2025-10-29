@@ -1,6 +1,7 @@
 ;; -*- lexical-binding: t; -*-
 ;; cf. https://github.com/jwiegley/dot-emacs/blob/master/init.org
-;; cf. https://github.com/progfolio/.emacs.d/blob/master/init.org 
+;; cf. https://github.com/progfolio/.emacs.d/blob/master/init.org
+;; cf. elpaca https://github.com/progfolio/elpaca
 ;; cf. https://blog.sumtypeofway.com/posts/emacs-config.html
 ;; cf. https://emacselements.com/gnus.html
 (setq gc-cons-percentage 0.5
@@ -191,6 +192,12 @@
          ("\\.lhs\\'" . haskell-literate-mode)
          ("\\.cabal\\'" . haskell-cabal-mode))
   )
+
+
+;; Let the ihp-mode begin.
+;; (elpaca (example :host github :repo "Montmorency/")) 
+(elpaca (ihp-mode :repo "~/projects/ihp-mode"))
+
 
 (use-package jtsx
   :ensure t

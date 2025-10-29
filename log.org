@@ -1,6 +1,19 @@
+# Things I keep forgetting
+
 Launch Browser:
     C-c b ;; opens url at point
 
-
 Editing sections of text:
-    C-x r t string-rectangle
+    C-x r t ;; string-rectangle
+
+
+# Package Management
+Using the [elpaca](https://github.com/progfolio/elpaca)
+
+```emacs
+(elpaca (ihp-mode :repo "~/projects/ihp-mode"))
+```
+
+```emacs
+(elpaca (example :host github :repo "Montmorency/"))
+```
