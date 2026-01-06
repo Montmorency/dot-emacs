@@ -195,8 +195,11 @@
 
 
 ;; Let the ihp-mode begin.
-;; (elpaca (example :host github :repo "Montmorency/")) 
+;; (elpaca (example :host github :repo "Montmorency/"))
 (elpaca (ihp-mode :repo "~/projects/ihp-mode"))
+        
+;; And then there was phi-mode ...
+;; (elpaca (phi-mode :repo "~/projects/phi-mode"))
 
 
 (use-package jtsx
@@ -204,7 +207,9 @@
   :mode (("\\.jsx?\\'" . jtsx-jsx-mode)
          ("\\.tsx\\'" . jtsx-tsx-mode)
          ("\\.ts\\'" . jtsx-typescript-mode))
+  
   :commands jtsx-install-treesit-language ;; make sure we have tree sitter grammar.
+  
   :hook ((jtsx-jsx-mode . hs-minor-mode)
          (jtsx-tsx-mode . hs-minor-mode)
          (jtsx-typescript-mode . hs-minor-mode))
@@ -247,6 +252,14 @@
   (add-hook 'jtsx-jsx-mode-hook 'jtsx-bind-keys-to-jtsx-jsx-mode-map)
   (add-hook 'jtsx-tsx-mode-hook 'jtsx-bind-keys-to-jtsx-tsx-mode-map)
   )  
+
+;;https://github.com/syohex/emacs-terraform-mode
+(use-package terraform-mode
+  :ensure t
+  :mode (("\\.tofu?\\" . terraform-mode))
+  :custom
+  ((terraform-command "tofu"))
+  )
 
 
 (use-package nix-mode
